@@ -6,6 +6,7 @@
 html{
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 /*colours*/
@@ -95,11 +96,68 @@ img{
 
 
 /*NAVIGATION*/
-nav{
-    background-color: transparent;
-    position: absolute;
-    width: 100vw;
+header{
+    background-color: var(--medium);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
 }
+.hamburger-container{
+    width: 2.7rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    cursor: pointer;
+}
+.hamburger{
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    border-radius: 1rem;
+   animation-timing-function: lienar;
+   animation-fill-mode: forwards;
+}
+.hamburger-1, .hamburger-3{
+    animation-duration: 700ms;
+}
+.hamburger-1{
+    /* animation-name: flipDown; */
+}
+.hamburger-2{
+    width: 80%;
+    /* animation-name: fadeOut; */
+    animation-duration: 500ms;
+}
+.hamburger-3{
+    /* animation-name: flipUp; */
+}
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+}
+
+@keyframes flipDown{
+    100%{
+        transform: rotate(45deg) translate(6px, 7px);
+    }
+}
+@keyframes flipUp{
+    100%{
+        transform: rotate(-45deg) translate(6px, -7px);
+    }
+}
+
+.navigation{
+    display: none;
+    width: 100%;
+    margin: 2rem 0rem 0rem -0.8rem;
+}
+
 a{
     text-decoration: none;
     color: var(--dark);
@@ -110,7 +168,6 @@ ul{
     justify-content: space-evenly !important;
     height: 4rem;
     margin-left: 2rem;
-    border-bottom: 1.2px solid black;
 }
 li{
     text-align: left;
@@ -138,23 +195,29 @@ li:hover{
 }
 
 .home-title{
-    width: 50%;
+    text-align: center;
+    width: 80%;
     color: var(--dark);
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: end;
 }
+.home-title h1{
+        width: 100%;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+}
 .name{
     font-size: 5rem;
 }
 .title{
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .header-imgs{
-    width: 60%;
-    justify-content: space-evenly;
+    display: none;
 }
 .image-1{
     height: 28rem;
@@ -167,19 +230,22 @@ li:hover{
 }
 
 .intro, .tiles{
-    height: 25rem;
     text-align: center;
-    padding: 5rem 10rem 5rem 10rem;
+    padding: 5rem 2rem 5rem 2rem;
+    height: fit-content;
 }
 .tiles{
-    height: 35rem;
+    height: fit-content;
 }
 .intro h2{
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--dark);
+    font-size: 1.5rem;
+    width: 100%;
 }
 .services{
     justify-content: space-between;
+    flex-direction: column;
 }
 .service-tile{
     width: 18rem;
@@ -189,6 +255,7 @@ li:hover{
     border-radius: 20px;
     height: 27rem;
     box-shadow: 0px 10px var(--medium);
+    margin-bottom: 2rem;
 }
 .service-tile h4{
     font-family: 'metal';
@@ -196,3 +263,18 @@ li:hover{
     font-size: 1.3rem;
 }
 /*END*/
+
+
+
+/*LAPTOP / WIDE TABLET*/
+@media screen and (min-width: 769px){
+    .header-imgs{
+        display: block;
+        width: 60%;
+        justify-content: space-evenly;
+    }
+}
+
+/*LARGE DESKTOP*/
+@media screen and (min-width: 1200px){
+}
