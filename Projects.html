@@ -6,25 +6,140 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projects</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="javascript/navigation.js" defer></script>
     </head>
 
-    <body>
-
-        <nav>
-
-        </nav>
-
-        <header>
-
+    <body class="colored-body">
+        <header class="header">
+            <div class="mobile-nav">
+                <nav>
+                    <div class="hamburger-container" id="toggle">
+                        <div class="hamburger-1 hamburger">
+                        </div>
+                        <div class="hamburger-2 hamburger">
+                        </div>
+                        <div class="hamburger-3 hamburger">
+                        </div>
+                    </div>
+                </nav>
+                <ul class="navigation" id="myList">
+                    <li><a href="About.html">ABOUT ME</a></li>
+                    <li><a href="Projects.html">PROJECTS</a></li>
+                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="Testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="Contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="desk-nav">
+                <ul>
+                    <li><a href="About.html">ABOUT ME</a></li>
+                    <li><a href="Projects.html">PROJECTS</a></li>
+                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="Testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="Contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="header-name">
+                <h1><a href="index.html">AJ Development</a></h1>
+            </div>
         </header>
 
         <main>
 
+            <div class="pj-header"><p>.</p></div>
+            <div class="flex">
+                <div class="pj-description" data-aos="flip-up" data-aos-duration="1500">
+                    <h2>PROJECTS</h2>
+                    </br>
+                    <p>I've developed a number of web appplications through my HND at Edinburgh College. Below is a collection of my work.</p>
+                </div>
+            </div>
+
+            <div class="pj-container desk-flex flex flex-col">
+                <div class="mg-top">
+                    <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/OrganicMe/" target="_blank"><img src="images/organicme.png"></a>
+                </div>
+                <div class="mg-bottom">
+                    <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/Bike-King/" target="_blank"><img src="images/organicme.png"></a>
+                </div>
+                <div class="mg-top">
+                    <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/cinema/home.php" target="_blank"><img src="images/organicme.png"></a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="desk-flex om">
+                    <img src="images/sunflowers.jpg">
+                    <div class="om-info" data-aos="fade-left" data-aos-duration="1600">
+                        <h2>ORGANIC ME</h2>
+                        </br>
+                        </br>
+                        <p>Organic Me was my first web project <em>ever</em>. It is a simple static website to advertise a local Borders farm and their organic produce</p>
+                        <p>The project utilized the Bootstrap framework to ensure a responsive design across many devices.</p>
+                        <p>Users can browse products, find the farm shop information, send queries via a contact form, view the farm on the google maps API, and view courses on offer.</p>
+                        </br>
+                        <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/OrganicMe/" target="_blank"><button>View Website</button></a>
+                    </div>
+                </div>
+                <div class="desk-flex om om-reverse">
+                    <img src="images/bikeking.jpeg">
+                    <div class="om-info" data-aos="fade-right" data-aos-duration="1600">
+                        <h2>Bike King</h2>
+                        </br>
+                        </br>
+                        <p>Bike King, located in the Scottish Borders, sells and rents road, mountain, and hybrid bikes. They offer a number of repair services and advertise local biking trails.</p>
+                        <p>The project was my first website built with <strong>JavaScript</strong> to store bike images and details.</p>
+                        <p>Users can search for bikes using the search filters provided, browse apparel and gear, find informaiton on services and repairs, pricing for rentals and local trail locations. They can contact the business, find social media links and find opening hours of the store.</p>
+                        </br>
+                        <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/Bike-King/" target="_blank"><button>View Website</button></a>
+                    </div>
+                </div>
+                <div class="desk-flex om">
+                    <img src="images/cinema.jpg">
+                    <div class="om-info" data-aos="fade-left" data-aos-duration="1600">
+                        <h2>LIMELIGHT CINEMA</h2>
+                        </br>
+                        </br>
+                        <p>Limelight cinema has various locations around the UK, however - this site was built with a focus on the midlothian area.</p>
+                        <p>Built using PHP and SQL to generate dynamic movie content - the website was my first project using backend languages.</p>
+                        <p>Users can create an account, browse currently showing films, find showtimes for specific venues and dates, and book tickets.</p>
+                        </br>
+                        <a href="http://webdev.edinburghcollege.ac.uk/~HNCWEBMR7/cinema/home.php" target="_blank"><button>View Website</button></a>
+                    </div>
+                </div>
+            </div>
         </main>
         
         <footer>
-
+            <div class="desk-footer">
+                <div class="socials">
+                    <div class="flex footer-links">
+                        <img src="images/linkedin.png" width="40px" height="40px">
+                        <a href="" target="blank"><p>Connect with me on LinkedIn</p></a>
+                    </div>
+                    <div class="flex footer-links">
+                        <img src="images/github.png" width="40px" height="40px">
+                        <a href="" target="blank"><p>View my GitHub</p></a>
+                    </div>
+                </div>
+                <div class="footer-links links2">
+                    <a href="Contact.php"><p>Contact Me</p></a>
+                    <a href="Projects.html"><p>My Projects</p></a>
+                    <a href="Services.php"><p>Services</p></a>
+                </div>
+            </div>
         </footer>
-
+        <div class="tag"><h6>Amber Jayne Development 2023</h6></div>
+        <script>
+            document.getElementById('toggle').addEventListener('click', function () {
+                const border = document.querySelector('.header');
+                border.classList.toggle('shrink'); // Add or remove the 'shrink' class
+            });
+        </script>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script>
+             window.addEventListener('load', () => { AOS.init(); });
+         </script>
     </body>
 </html>

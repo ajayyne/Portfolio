@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amber Jayne Development</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="javascript/navigation.js" defer></script>
+</head>
+
+<body  class="colored-body">
+    <header class="header">
+        <div class="mobile-nav">
+            <nav>
+                <div class="hamburger-container" id="toggle">
+                    <div class="hamburger-1 hamburger">
+                    </div>
+                    <div class="hamburger-2 hamburger">
+                    </div>
+                    <div class="hamburger-3 hamburger">
+                    </div>
+                </div>
+            </nav>
+            <ul class="navigation" id="myList">
+                <li><a href="About.html">ABOUT ME</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="Contact.php">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="desk-nav">
+            <ul>
+                <li><a href="About.html">ABOUT ME</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="Contact.php">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="header-name">
+            <h1><a href="index.html">AJ Development</a></h1>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="service-header"><p>.</p></div>
+        <div class="flex">
+            <div class="service-description" data-aos="flip-up" data-aos-duration="1500">
+                <h2>MY SERVICES</h2>
+                </br>
+                <p>From development to deployment, I take you through the entire web building process.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col service-cont">
+            <div class="service flex flex-col">
+                <img src="images/dev.jpg">
+                <div class="service-info">
+                </br>
+                    <h3>Bespoke Websites</h3>
+                    </br>
+                    <p>Building websites from scratch, I offer bespoke websites tailored to your & your business. 
+                    </br></br>I'm proficient with HTML, CSS, JavaScript, PHP and SQL and I have experience managing large client databases.
+                    </p>
+                </div>    
+            </div>
+            <div class="service flex flex-col">
+                <img src="images/ui.jpg"> 
+                <div class="service-info">
+                </br>
+                    <h3>UI/UX Design</h3>
+                    </br>
+                    <p>Armed with the fundamentals of design, I create intuitive and engaging designs that increase user satisfaction
+                    </br></br>I create and deliver detailed and accurate wireframes and high-fidelity prototypes using Figma</p>
+                </div>    
+            </div>
+            <div class="service flex flex-col">
+                <img src="images/maint.jpg">
+                <div class="service-info">
+                </br>
+                    <h3>Maintenance</h3>
+                    </br>
+                    <p>After deployment, I offer upkeep and maintenance services to ensure your website is modern and up to date with the current standards of security
+                    </br></br>Any necessary maintenance is free of charge!</p>
+                </div>    
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+    <footer>
+        <div class="desk-footer">
+            <div class="socials">
+                <div class="flex footer-links">
+                    <img src="images/linkedin.png" width="40px" height="40px">
+                    <a href="" target="blank"><p>Connect with me on LinkedIn</p></a>
+                </div>
+                <div class="flex footer-links">
+                    <img src="images/github.png" width="40px" height="40px">
+                    <a href="" target="blank"><p>View my GitHub</p></a>
+                </div>
+            </div>
+            <div class="footer-links links2">
+                <a href="Contact.php"><p>Contact Me</p></a>
+                <a href="Projects.html"><p>My Projects</p></a>
+                <a href="Services.php"><p>Services</p></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.getElementById('toggle').addEventListener('click', function () {
+            const border = document.querySelector('.header');
+            border.classList.toggle('shrink'); // Add or remove the 'shrink' class
+        });
+    </script>
+</body>
+
+</html>
