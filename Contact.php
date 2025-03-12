@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Me</title>
-    <meta name="description" content="I am based in the Scottish Borders, Contact me to find out more about my Wed Develpment services or quotes.">
+    <meta name="description" content="I am based in the Scottish Borders, Contact me
+    to find out more about my Wed Develpment services or quotes.">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="javascript/navigation.js" defer></script>
