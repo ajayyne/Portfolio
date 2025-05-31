@@ -17,9 +17,12 @@
 
 :root {
     --taupe: rgba(134, 105, 105, 0.626);
+    --form: rgb(134, 105, 105);
     --black: #343231;
     --text: #F5F5F5;
     --button: #f5f5f5ce;
+    --shadow: rgba(0, 0, 0, 0.381);
+    --submit: #343231b6;
 }
 
 * {
@@ -69,6 +72,7 @@ a{
     list-style-image: url(../images/bullet.png);
     text-decoration: none;
     cursor: pointer;
+    color: white;
 }
 
 img{
@@ -168,54 +172,68 @@ header ul{
 .project-cont{
     width: 100vw;
 }
-.project{
-    height: 80vh;
-    width: 20vw;
-    background-color: var(--taupe);
-    box-shadow: 0 0 8px rgba(125, 70, 88, 0.6); 
+.splide{
+    width: 80%;
 }
-.project .txt-align{
-    padding: 1rem;
-    font-size: 0.8rem;
-}
-
-.hiddenButtons{
-    display: none;
-    
-}
-.project:hover .hiddenButtons {
-    display: block; 
-}
-
-.image-wrapper {
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-.default, .hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.splide__slide .slide-content {
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
-}
-
-.hover {
-    opacity: 0;
-}
-
-.image-wrapper:hover .hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.image-wrapper:hover .default {
-    opacity: 0;
-}
-
-.page3 img, .page3 .image-wrapper{
-    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.824);
+    color: var(--text);
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 3px 3px 0px 0px;
     width: 100%;
 }
+
+.splide__slide:hover .slide-content {
+    opacity: 1;
+}
+.slide-content h1{
+    font-family: 'Aboreto';
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+     color: rgba(255, 255, 255, 0.829);
+}
+.slide-content p{
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    margin: 1rem 0rem 1rem 0rem;
+    color: rgba(255, 255, 255, 0.829);
+}
+.slide-content button{
+    font-size: small;
+    width: 18rem;
+    border: 1px solid var(--form);
+    color: var(--text);
+    background-color: var(--form);
+}
+.slide-content button:hover{
+    background-color:  rgb(159, 126, 126);
+}
+.splide__pagination{
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .page2 .info{
     background-color: white;
@@ -260,6 +278,22 @@ header ul{
 }
 .about-text p{
     width: 80%;
+    font-variant: small-caps;
+}
+.about-text button{
+    background-color: var(--form);
+    margin-top: 2rem;
+    width: 15rem;
+    box-shadow: 0px 1px 1px 0px var(--shadow);
+    border: none;
+      position: relative; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.about-text button:hover{
+    background-color:  rgb(159, 126, 126);
+    transform: translateY(-5px);
 }
 
 .SS{
@@ -268,16 +302,19 @@ header ul{
 }
 .page4 .skills{
     height: 100vh;
-    padding: 6rem 0rem 1.5rem 6rem;
-    width: 42%;
-   
+    padding: 6rem 6rem 1.5rem 6rem;
+    width: 50%;
+}
+.skills li{
+    font-family: 'Aboreto';
+    padding-top: 0.5rem;
+    color: lightgray;
 }
 .page4 .services{
     background-color: var(--black);
-    width: 58%;
+    width: 50%;
     padding: 0rem 2rem 0rem 0rem;
     height: 100vh;
-
 }
 
 .tab{
@@ -357,6 +394,62 @@ header ul{
 }
 .contact h1{
     margin-top: -1rem;
-    background-color: var(--black);
+    background-color: var(--form);
     width: 10rem;
+    margin-bottom: 0.3rem;
+}
+.contact p{
+    margin-bottom: 4rem;
+    font-size: smaller;
+    font-variant: small-caps;
+}
+.form{
+    border-radius: 10px;
+    background-color: var(--form);
+    padding: 5rem;
+    align-items:stretch;
+    margin-top: 2rem;
+}
+form input, form textarea{
+    outline: none;
+    border: 2px solid var(--taupe);
+    margin-top: 1rem;
+    border-radius: 5px;
+    background-color: var(--text);
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    width: 13rem;
+}
+form textarea{
+    height: 5rem;
+    border: 2px solid var(--taupe);
+}
+form input:hover, form textarea:hover{
+    box-shadow: 0 4px 4px 0 var(--shadow);
+}
+label{
+    color: transparent;
+    font-size: 0.1rem;
+}
+form input[placeholder], form textarea[placeholder]{
+    font-style: italic;
+    font-size: 0.7rem;
+}
+form input[value]{
+    font-family: 'Aborteto';
+    background-color: var(--submit);
+    color: var(--text);
+    cursor: pointer;
+    position: relative; /* Ensures the element can move */
+    transition: transform 0.3s ease-in-out; /* Smooth movement */
+    border-radius: 20px;
+    box-shadow: unset;
+    margin-top: 2rem;
+}
+
+form input[value]:hover{
+     transform: translateY(-5px);
+}
+.skills-img img{
+    height: 100vh !important;
+    width: 100%;
 }
