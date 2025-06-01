@@ -30,9 +30,10 @@ changes on the projects page:
 -> changed project description from Lorem Ipsum to better copy to include keywords
 
 
-changes on the services page:
+changes on the skills page:
 -> changed bullet points to include specific skills/languages
 
+-> Added Services page to include various services: Building, Designing, Updates, Maintenance, Consultations etc.
 
 
 
