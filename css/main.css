@@ -53,6 +53,7 @@ main {
     align-items: center;
 }
 
+
 h1{
     font-family: 'Noto';
     font-weight: 200;
@@ -96,6 +97,7 @@ button{
     padding: 0.5rem 2rem 0.5rem 2rem;
     cursor: pointer;
 }
+
 
 .txt-align{
     text-align: center;
@@ -150,6 +152,13 @@ header ul{
 }
 .page1 button{
     margin-top: 2rem;
+  transition: transform 0.3s ease-in-out; 
+}
+.page1 button:hover{
+    background-color: rgb(159, 126, 126);
+    color: var(--text);
+    transform: translateY(-5px);
+    border: 2px solid rgb(159, 126, 126);
 }
 
 .page1{
