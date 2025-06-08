@@ -23,8 +23,23 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <main>
 
         <section class="page1 txt-align" id="landing">
+             <div class="mobile-nav">
+                <button id="menuBtn">☰</button>
+                <nav id="sideNav">
+                    <button id="closeBtn">&times;</button>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
             <header class="flex-between">
-                <a href="#landing"><h1>Amber Jayne</h1></a>
+                <a href="#landing">
+                    <h1 class="nav-name">Amber Jayne</h1>
+                </a>
                 <ul class="flex-even">
                     <a href="#about">
                         <li>About</li>
@@ -41,6 +56,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </ul>
             </header>
 
+           
             <div class="flex-col">
                 <img src="images/whitesparkle.png" width="50px" height="50px" alt="sparkle icon">
                 <h1>AMBER JAYNE</h1>
@@ -49,10 +65,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </div>
         </section>
 
-        <section class="page2 flex-between" id="about">
+        <section class="page2" id="about">
 
-            <div class="flex-start">
-                <img src="images/laptop3.jpg" alt="girl studying on laptop">
+            <div class="flex-start page2-imgs">
+                <img src="images/laptop3.jpg" alt="girl studying on laptop" class="about1">
                 <img src="images/aboutimg.jpg" class="overlap-img" height="450px" width="300px" alt="laptop flatlay">
             </div>
 
@@ -84,7 +100,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
-                            <img src="images/herringbone.png" width="100%" height="400px" alt="herringbone website cover image. Woman holding stylish bag.">
+                            <img src="images/herringbone.png" width="100%" height="400px"
+                                alt="herringbone website cover image. Woman holding stylish bag.">
                             <div class="slide-content">
                                 <p>Highlighting a local gift shop featuring handcrafted Scottish products, showcasing
                                     artisans, traditions, and a café that complements the experience.<br><em>A dynamic,
@@ -95,7 +112,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                         </li>
                         <li class="splide__slide">
-                            <img src="images/BIKEKING.png" width="100%" height="400px" alt="Bike King Borders website cover image. Standing bike on a forest path.">
+                            <img src="images/BIKEKING.png" width="100%" height="400px"
+                                alt="Bike King Borders website cover image. Standing bike on a forest path.">
                             <div class="slide-content">
 
                                 <p>Showcasing the best of cycling—explore local trails, discover essential ride tips,
@@ -106,10 +124,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                         </li>
                         <li class="splide__slide">
-                            <img src="images/chapters.png" width="100%" height="400px" alt="Chapters Cafe website cover image. Merangue cakes.">
+                            <img src="images/chapters.png" width="100%" height="400px"
+                                alt="Chapters Cafe website cover image. Merangue cakes.">
                             <div class="slide-content">
                                 <p>A cozy Edinburgh café serving artisan coffee, freshly baked cupcakes, muffins, and a
-                                    variety of delicious vegan treats in a warm, inviting setting.<br>The main focus for this application was to demonstrate foundational React JS knowledge.<br><em>Technologies:
+                                    variety of delicious vegan treats in a warm, inviting setting.<br>The main focus for
+                                    this application was to demonstrate foundational React JS
+                                    knowledge.<br><em>Technologies:
                                         HTML, CSS, React JS, MUI</em></p>
                                 <a href="https://ambercafeapp.netlify.app/about" target="_blank"><button>View
                                         Website</button></a>
@@ -117,18 +138,21 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             </div>
                         </li>
                         <li class="splide__slide">
-                            <img src="images/limelight.png" width="100%" height="400px" alt="Limelight Cinema website cover image. Girl eating popcorn.">
+                            <img src="images/limelight.png" width="100%" height="400px"
+                                alt="Limelight Cinema website cover image. Girl eating popcorn.">
                             <div class="slide-content">
 
                                 <p>A local cinema with five venues, featuring film screenings, special events, and a
                                     welcoming atmosphere for movie lovers in the community.<br><em>Technologies: HTML,
-                                        CSS, JS, PHP, SQL, MYSQL</em><br>The main focus for this project was to create a dynamic, data driven application.</p>
+                                        CSS, JS, PHP, SQL, MYSQL</em><br>The main focus for this project was to create a
+                                    dynamic, data driven application.</p>
                                 <a href="http://webdev.edinburghcollege.ac.uk/HNCWEBMR7/cinema/home.php"
                                     target="_blank"><button>View Website</button></a>
                             </div>
                         </li>
                         <li class="splide__slide">
-                            <img src="images/organicme.png" width="100%" height="400px" alt="Organic Me website cover image. Woman gardening and planting flowers.">
+                            <img src="images/organicme.png" width="100%" height="400px"
+                                alt="Organic Me website cover image. Woman gardening and planting flowers.">
                             <div class="slide-content">
                                 <p>An organic farm offering locally produced honey and a farm shop stocked with fresh,
                                     organic products, connecting visitors to sustainable farming and natural
@@ -140,8 +164,77 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     </ul>
                 </div>
             </section>
+        </section>
 
 
+        <section class="page3-1">
+            <section class="mob-projects flex-col">
+                <div class="proj">
+                    <img src="images/herringbone.png" width="100%">
+                    <br>
+                    <br>
+                    <div>
+                        <p>Highlighting a local gift shop featuring handcrafted Scottish products, showcasing
+                            artisans, traditions, and a café that complements the experience.<br><br><em>A dynamic,
+                                data driven e-commerce site. Technologies: HTML, CSS, JS, PHP, SQL, JSON, AJAX,
+                                MYSQL</em></p>
+                        <a href="http://webdev.edinburghcollege.ac.uk/HNCWEBMR7/Herringbone/Home.php"
+                            target="_blank"><button>View Website</button></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page3-1">
+            <section class="mob-projects flex-col">
+                <div class="proj">
+                    <img src="images/BIKEKING.png" width="100%">
+                    <br>
+                    <br>
+                    <div>
+                        <p>Showcasing the best of cycling—explore local trails, discover essential ride tips,
+                            and browse top-quality bikes and gear, all available in-store to fuel your next
+                            adventure.<br><br><em>Technologies: HTML, CSS, JS</em></p>
+                        <a href="http://webdev.edinburghcollege.ac.uk/HNCWEBMR7/Bike-King/" target="_blank"><Button>View
+                                Website</Button></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page3-1">
+            <section class="mob-projects flex-col">
+                <div class="proj">
+                    <img src="images/limelight.png" width="100%">
+                    <br>
+                    <br>
+                    <div>
+                        <p>A local cinema with five venues, featuring film screenings, special events, and a
+                            welcoming atmosphere for movie lovers in the community.<br><em>Technologies: HTML,
+                                CSS, JS, PHP, SQL, MYSQL</em><br><br>The main focus for this project was to create a
+                            dynamic, data driven application.</p>
+                        <a href="http://webdev.edinburghcollege.ac.uk/HNCWEBMR7/cinema/home.php"
+                            target="_blank"><button>View Website</button></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page3-1">
+            <section class="mob-projects flex-col">
+                <div class="proj">
+                    <img src="images/organicme.png" width="100%">
+                    <br>
+                    <br>
+                    <div>
+                        <p>An organic farm offering locally produced honey and a farm shop stocked with fresh,
+                            organic products, connecting visitors to sustainable farming and natural
+                            goodness.<br><br><em>Technologies: HTML, CSS, Bootstrap</p>
+                        <a href="http://webdev.edinburghcollege.ac.uk/HNCWEBMR7/OrganicMe/" target="_blank"><button>View
+                                Website</button></a>
+                    </div>
+                </div>
+            </section>
         </section>
 
 
@@ -253,7 +346,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="flip-card flex-col txt-align">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/cogsicon.png" width="250px" height="250px" alt="maintenance gears icon">
+                                <img src="images/cogsicon.png" width="250px" height="250px"
+                                    alt="maintenance gears icon">
                                 <h2>Maintenance</h2>
                                 <p>Regular web maintenance to boost performance</p>
                             </div>
@@ -270,7 +364,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="flip-card flex-col txt-align">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/seoicon.png" width="230px" height="230px" alt="seo icon, web browser searching for a website">
+                                <img src="images/seoicon.png" width="230px" height="230px"
+                                    alt="seo icon, web browser searching for a website">
                                 <h2>SEO</h2>
                                 <p>Search Engine Optimisation techniques & principles</p>
                             </div>
@@ -284,7 +379,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <div class="flip-card flex-col txt-align">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/socialmediaicon.png" width="250px" height="250px" alt="phone and social media icon">
+                                <img src="images/socialmediaicon.png" width="250px" height="250px"
+                                    alt="phone and social media icon">
                                 <h2>Client Support</h2>
                                 <p>Ongoing client support for a year</p>
                             </div>
@@ -315,6 +411,80 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </div>
         </section>
 
+
+
+        <section class="page5-1">
+            <div class="flex-col services-mob">
+                <div>
+                    <h1><strong>MY SERVICES</strong></h1>
+                </div>
+                <div class="acc-cont">
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/designicon.png" alt="Web design icon">
+                        <span>Web Design</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I create visually appealing and user-friendly websites by applying UI/UX principles,
+                            ensuring intuitive navigation, responsive design, and seamless user interactions for
+                            an engaging digital experience.</p>
+                    </div>
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/laptopicon1.png" alt="Web development laptop icon">
+                        <span>Bespoke Web Development</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I develop custom, bespoke websites tailored to unique business needs, ensuring
+                            seamless functionality, user-friendly design, and scalable performance.</p>
+                    </div>
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/cogsicon.png" alt="gear cog icon">
+                        <span>Web Maintenance</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I provide ongoing website maintenance, optimizing speed, security, and functionality
+                            to ensure peak performance and a seamless user experience.</p>
+                    </div>
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/seoicon.png" alt="Seo icon">
+                        <span>SEO</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I implement SEO best practices, optimizing site structure, content, and performance
+                            to enhance visibility, improve rankings, and drive organic traffic.</p>
+                    </div>
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/socialmediaicon.png" alt="phone icon">
+                        <span>Client Support</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I offer dedicated client support for a full year, ensuring reliable assistance,
+                            troubleshooting, and ongoing guidance to keep your website running smoothly.</p>
+                    </div>
+                    <div class="accordion" onclick="toggleAccordion(this)">
+                        <img src="images/mouseicon.png" alt="Web design icon">
+                        <span>Tailored Service</span>
+                        <span class="icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I craft tailored digital solutions, customizing every aspect of design and
+                            functionality to align perfectly with your business goals and unique brand identity.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
         <section class="page6 flex-between" id="contact">
             <div class="contact-imgs flex-col">
                 <img src="images/laptop.jpg" width="600px" height="150px" alt="girl working on laptop in a cafe">
@@ -330,9 +500,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                         <p>I would love to chat with you!</p>
                     </div>
                     <div class="flex-center socials">
-                        <a href="https://www.facebook.com/profile.php?id=61573587692197" target="_blank"><img src="images/whitefb.png" width="30px" alt="facebook icon"></a>
-                        <a href="https://github.com/ajayyne?tab=repositories" target="_blank"><img src="images/whitegithub.png" width="30px" alt="github icon"></a>
-                        <a href="https://www.linkedin.com/in/amber-degner-budd-b36728369/" target="_blank"><img src="images/whitelinkedin.png" width="30px" alt="linkedin icon"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61573587692197" target="_blank"><img
+                                src="images/whitefb.png" width="30px" alt="facebook icon"></a>
+                        <a href="https://github.com/ajayyne?tab=repositories" target="_blank"><img
+                                src="images/whitegithub.png" width="30px" alt="github icon"></a>
+                        <a href="https://www.linkedin.com/in/amber-degner-budd-b36728369/" target="_blank"><img
+                                src="images/whitelinkedin.png" width="30px" alt="linkedin icon"></a>
                     </div>
                     <div>
                         <form class="flex-col">
@@ -359,6 +532,43 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         });
 
         splide.mount();
+
+        function toggleAccordion(element) {
+            element.classList.toggle("active");
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sideNav = document.getElementById("sideNav");
+        const closeBtn = document.getElementById("closeBtn");
+
+        menuBtn.addEventListener("click", () => {
+            sideNav.style.left = "0";
+        });
+
+        closeBtn.addEventListener("click", () => {
+            sideNav.style.left = "-100%";
+        });
+
+const navLinks = document.querySelectorAll("#sideNav ul li a");
+
+menuBtn.addEventListener("click", () => {
+    sideNav.style.left = "0";
+});
+
+closeBtn.addEventListener("click", () => {
+    sideNav.style.left = "-100%";
+});
+
+// Close nav when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        sideNav.style.left = "-100%";
+    });
+});
+
+
     </script>
 </body>
 
