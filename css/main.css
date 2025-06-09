@@ -637,7 +637,11 @@ header ul {
         background-image: none;
     }
     .contact-imgs{
-        margin-top: -5rem;
+        margin-top: -2rem;
+    }
+    .contact-imgs img{
+        width: 500px;
+        margin-bottom: 0.5rem;
     }
     .page5-1 {
         display: none;
@@ -984,4 +988,15 @@ header ul {
         width: 100%;
     }
 }
+
+@media screen and (min-width: 1024px){
+     .contact-imgs{
+        margin-top: -5rem;
+    }
+    .contact-imgs img{
+        width: 600px;
+        margin-bottom: 1rem;
+    }
+}
+
 
