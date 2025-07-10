@@ -1,3 +1,14 @@
+
+<?php
+
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -400,8 +411,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 <p>A guide through foundational web knowledge</p>
                             </div>
                             <div class="flip-card-back">
-                                <p>
-                                </p>I offer one-to-one lessons to guide beginners through the foundations of HTML, CSS, JavaScript and PHP.
+                                <p>I offer one-to-one lessons to guide beginners through the foundations of HTML, CSS, JavaScript and PHP.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -506,7 +517,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                                 src="images/whitelinkedin.png" width="30px" alt="linkedin icon"></a>
                     </div>
                     <div>
-                        <form class="flex-col">
+                        <form class="flex-col" method="post">
                             <label for="name">Full Name</label>
                             <input type="text" name="name" maxlength="30" required placeholder="Full Name">
                             <label for="email">Email Address</label>
@@ -514,7 +525,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                             <label for="message">Message</label>
                             <textarea type="text" name="message" maxlength="150" required
                                 placeholder="Say Hi!"></textarea>
-                            <input type="submit" value="SEND">
+                            <input type="submit" value="SEND" name="formSubmit">
                         </form>
                     </div>
                 </div>
@@ -522,7 +533,58 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
         </section>
     </main>
+<?php
 
+            if (isset($_POST['formSubmit'])) {
+
+                // Create a new PHPMailer instance
+                $mail = new PHPMailer(true);
+
+
+                try {
+
+                    // Server settings
+            
+                    $mail->isSMTP();
+
+                    $mail->Host = 'smtp.gmail.com';
+
+                    $mail->SMTPAuth = true;
+
+                    $mail->Username = 'adegnerbudd@gmail.com';
+
+                    $mail->Password = 'yxuhvqtxrfftgiur';
+
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+
+                    $mail->Port = 587;
+
+                    // Recipients
+            
+                    $mail->setFrom($_POST['email'], $_POST['name']);
+
+                    $mail->addAddress('amber.db17@yahoo.com', 'Enquiry');
+
+                    // Content
+            
+                    $mail->isHTML(true);
+
+                    $mail->Subject = 'Amber Jayne Website ';
+
+                    $mail->Body = $_POST['message'];
+
+                    $mail->send();
+                     echo "<script>alert('Message sent successfully. Thank you!')</script>";
+
+
+                } catch (Exception $e) {
+
+                    echo "<script>alert('Message could not be sent.')</script>";
+
+                }
+            }
+
+            ?>
     <script>
         var splide = new Splide('.splide', {
             type: 'loop',

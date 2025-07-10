@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b77d0f76-5900-4034-9a2d-2eec3d62af06/resourceGroups/AmbersPortfolio/providers/Microsoft.Web/sites/ambersportfolio",
+    "appService.deploySubpath": "."
+}
